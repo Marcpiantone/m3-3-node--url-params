@@ -1,6 +1,10 @@
 <%- include( '../partials/header') %>
 <div class='main'>
-    <h2 class='title'>OK</h2>
-    <p class='subtitle'>This works <%= path %></p>
+    <h2 class='title'></h2>
+    <p class='subtitle'></p>
+    <ul><% top50.forEach(song => { %>
+    <li><%- `Number ${top50.indexOf(song)+1}. ${song.title}` %> </li>
+    <% }) %>
+    </ul>
 </div>
 <%- include( '../partials/footer') %>
