@@ -1,1 +1,34 @@
 /* song css */
+.song {
+  border-bottom: solid 1px;
+  border-color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.ranking {
+}
+.ranking .rank {
+  margin-top: 10px;
+  font-weight: 200;
+  font-size: 3em;
+}
+.ranking .streams {
+  font-size: 0.75em;
+  margin-top: 10px;
+}
+.infos {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.infos .title {
+  font-weight: 700;
+  font-size: 1.25em;
+}
+.infos .artist {
+  font-style: italic;
+}
+.infos .publicationDate {
+  text-align: right;
+}
