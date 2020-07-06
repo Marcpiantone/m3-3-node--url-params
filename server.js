@@ -39,7 +39,8 @@ app.get("/top50", (req, res) => {
 // New endpoint top50/song/#
 
 app.get("/top50/song/:id", (req, res) => {
-  const id = req.params.id;
+  const id = Number(req.params.id);
+  console.log(typeof id);
   if (top50[id - 1]) {
     res.status(200);
     res.render("pages/songPage", {
