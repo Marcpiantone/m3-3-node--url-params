@@ -4,13 +4,15 @@
   border-color: black;
   padding: 10px;
   display: flex;
-  flex-direction: row;
 }
 .ranking {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
 }
 .ranking .rank {
   margin-top: 10px;
-  font-weight: 200;
+  font-weight: 700;
   font-size: 3em;
 }
 .ranking .streams {

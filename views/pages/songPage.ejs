@@ -1,0 +1,20 @@
+<%- include( '../partials/header') %>
+<div class="main">
+    <h2 class='title'></h2>
+    <p class='subtitle'></p>
+    <div class = "songPage">
+    <div class="songDetails">
+        <% const idIndex = id-1 %> 
+        <p class = "title">
+        <%- `${top50[idIndex].title}` %> 
+        </p>
+        <p class = "artist" >
+        <%- `${top50[idIndex].artist}` %>
+        </p>
+        <p class = "streams">
+        <%- `${top50[idIndex].streams}` %> 
+        </p>
+    </div>
+</div>
+</div>
+<%- include( '../partials/footer') %>
