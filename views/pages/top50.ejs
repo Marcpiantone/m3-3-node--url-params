@@ -2,9 +2,9 @@
 <div class='main'>
     <h2 class='title'></h2>
     <p class='subtitle'></p>
-    <ul><% top50.forEach(song => { %>
-    <li><%- `Number ${top50.indexOf(song)+1}. ${song.title}` %> </li>
+<ol><% top50.forEach(song => { %>
+    <%- include( '../partials/song', {song : song}) %>
     <% }) %>
-    </ul>
+</ol>
 </div>
 <%- include( '../partials/footer') %>
