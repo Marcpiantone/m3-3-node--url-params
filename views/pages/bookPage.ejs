@@ -1,0 +1,15 @@
+<%- include( '../partials/header') %>
+<div class="main">
+    <div class="bookPage">
+        <div class="bookFace">
+            <img class="bookImg" src="<%-book.imgUrl %> " alt="<%- `${book.name} picture` %> ">
+            <p><%-book.type %> </p>
+        </div>
+        <div class="bookDetails">
+            <h2><%- book.title %> </h2>
+            <p> by <%-book.author %> </p>
+            <p><%- book.description %> </p>
+        </div>
+    </div>
+</div>
+<%- include( '../partials/footer') %>

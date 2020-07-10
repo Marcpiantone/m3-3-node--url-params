@@ -1,0 +1,27 @@
+.book {
+  display: flex;
+  border-bottom: solid black 1px;
+  padding: 20px;
+}
+
+.book .details {
+  margin: 20px;
+}
+
+.book .title {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.book .author {
+  font-size: 1.2em;
+}
+
+.book .type {
+  font-size: 0.7em;
+}
+
+.book .description {
+  padding-top: 10px;
+}

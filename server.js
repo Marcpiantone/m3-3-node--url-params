@@ -7,6 +7,8 @@ const morgan = require("morgan");
 
 const { top50 } = require("./data/top50");
 
+const { books } = require("./data/books");
+
 const PORT = process.env.PORT || 8000;
 
 const app = express();
@@ -47,6 +49,43 @@ app.get("/top50/song/:id", (req, res) => {
       title: `Song #${id}`,
       top50,
       id,
+    });
+  } else {
+    res.status(404);
+    res.render("pages/fourOhFour", {
+      title: "I got nothing",
+      path: req.originalUrl,
+    });
+  }
+});
+
+// New endpoints Books
+app.get("/books", (req, res) => {
+  res.status(200);
+  res.render("pages/books", {
+    title: "All my books",
+    books,
+  });
+});
+
+app.get("/books/book/:id", (req, res) => {
+  const id = Number(req.params.id);
+  console.log(id);
+
+  const getBookById = () => {
+    const book = books.find((book) => {
+      return book.id === id;
+    });
+    return book;
+  };
+
+  const book = getBookById();
+  console.log(book);
+  if (book !== undefined) {
+    res.status(200).render("pages/bookPage", {
+      title: "My books in details",
+      book,
+      books,
     });
   } else {
     res.status(404);
