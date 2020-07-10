@@ -1,0 +1,9 @@
+<%- include( '../partials/header', { title: title }) %>
+<div class='main'>
+    <ol>
+        <% myGenre.forEach(book => { %>
+            <%- include('../partials/book', {book: book}) %>
+        <% }); %>
+    </ol>
+</div>
+<%- include( '../partials/footer') %>

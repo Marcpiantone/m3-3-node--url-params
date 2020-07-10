@@ -96,6 +96,25 @@ app.get("/books/book/:id", (req, res) => {
   }
 });
 
+app.get("/books/type/:genre", (req, res) => {
+  const genre = req.params.genre;
+
+  const getBooksByGenre = () => {
+    const bookGenre = books.filter((book) => {
+      return book.type === genre;
+    });
+    return bookGenre;
+  };
+
+  const myGenre = getBooksByGenre();
+  console.log(myGenre);
+  res.status(200).render("pages/fictionPage", {
+    title: `My ${genre} books`,
+    myGenre,
+    books,
+  });
+});
+
 // handle 404s
 app.get("*", (req, res) => {
   res.status(404);
