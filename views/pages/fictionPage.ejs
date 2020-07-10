@@ -2,7 +2,18 @@
 <div class='main'>
     <ol>
         <% myGenre.forEach(book => { %>
-            <%- include('../partials/book', {book: book}) %>
+           <li>
+<div class = "book">
+    <div class ="mainInfoGenre">
+        <div class="Smallimage"> <img src= <%- `${book.imgUrl}` %> alt=<%- `${book.title}` %>> <%-  %> </div>
+    </div>
+    <div class="details">
+        <div class = "title"><%- `${book.title}` %> </div>
+        <div class="author"><%- `${book.author}` %></div>
+        <div class = "type" ><%- `(${book.type})` %> </div>
+    </div>
+</div>
+</li>
         <% }); %>
     </ol>
 </div>
